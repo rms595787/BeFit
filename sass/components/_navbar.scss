@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'varibales';
 @import 'mixins';
 
 // General body styles
@@ -25,12 +25,28 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
 
+    // Styles for light mode
     &.light-mode {
         @include light-mode;
     }
 
+    // Styles for dark mode
     &.dark-mode {
         @include dark-mode;
+    }
+}
+
+// Nav left items
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-right: auto; // Pushes the nav-center to the center
+
+    .nav-item {
+        margin-right: 1.5rem;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 }
 
@@ -38,6 +54,8 @@ body {
 .nav-center {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 1; // Takes up remaining space
 
     .nav-item {
         margin-right: 1.5rem;
@@ -58,12 +76,17 @@ body {
         padding-right: 1rem;
 
         #modeText {
-            margin-right: 0.5rem;
+            margin-right: 0.1rem;
         }
     }
 
     .nav-item {
-        margin-right: 1.5rem;
+        margin-right: 0.5rem;
+        text-decoration: none;
+    }
+    .nav-item-2 {
+        margin-right: 0.5rem;
+        text-decoration: none;
     }
 }
 

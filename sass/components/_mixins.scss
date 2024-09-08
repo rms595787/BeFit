@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'varibales';
 
 // Mixin for navbar styles
 @mixin navbar-styles($background, $text-color, $button-bg, $search-border) {
@@ -7,10 +7,18 @@
     .nav-item {
         color: $text-color;
     }
-    .search-bar {
-        background-color: $background;
-        color: $text-color;
-        border: 1px solid $search-border;
+    .nav-item-2{
+        color:$text-color;
+        border: 2px solid $button-bg;
+        border-radius: 5px;
+        padding:2px 10px;
+    }
+    .nav-item-3{
+        width:20px;
+        border: 2px solid $button-bg;
+        border-radius: 80px;
+        padding:5px;
+        background-color: $background-light;
     }
     .mode-toggle {
         align-items: center;
@@ -33,6 +41,19 @@
     .switch .slider {
         background-color: $search-border-dark;
     }
+    .nav-item-2{
+        color:$text-body-dark;
+        border: 2px solid $button-dark;
+        border-radius: 5px;
+        padding:2px 10px;
+    }
+    .nav-item-3{
+        width:20px;
+        border: 2px solid $button-dark;
+        border-radius: 80px;
+        padding:5px;
+        background-color: $background-dark;
+    }
 }
 
 // Mixin for light mode
@@ -46,5 +67,18 @@
     }
     .switch .slider {
         background-color: $search-border-light;
+    }
+    .nav-item-2{
+        color:$text-body-light;
+        border: 2px solid $button-light;
+        border-radius: 5px;
+        padding:2px 10px;
+    }
+    .nav-item-3{
+        width:20px;
+        border: 2px solid $button-light;
+        border-radius: 80px;
+        padding:5px;
+        background-color: $background-light;
     }
 }
