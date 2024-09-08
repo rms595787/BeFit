@@ -1,0 +1,166 @@
+@import 'varibales';
+@import 'mixins';
+
+// General body styles
+body {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.light-mode {
+        @include light-mode;
+    }
+
+    &.dark-mode {
+        @include dark-mode;
+    }
+}
+
+// Navbar styles
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+
+    // Styles for light mode
+    &.light-mode {
+        background-color: $navbar-light; // Light mode background for navbar
+
+        .nav-item, #modeText {
+            color: $search-border-light; // Peru color
+        }
+    }
+
+    // Styles for dark mode
+    &.dark-mode {
+        background-color: $navbar-dark; // Dark mode background for navbar
+
+        .nav-item, #modeText {
+            color: $search-border-dark; // Dark mode text color
+        }
+    }
+}
+
+// Nav center items
+.nav-center {
+    display: flex;
+    align-items: center; // Ensure vertical alignment of nav items
+
+    .nav-item {
+        margin-right: 1.5rem;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+// Nav right items (including mode toggle and login/register)
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    .mode-toggle {
+        display: flex;
+        align-items: center; // Ensure "Light/Dark" is aligned
+        padding-right: 1rem;
+
+        #modeText {
+            margin-right: 0.5rem; // Add space between the text and the switch
+        }
+    }
+
+    .nav-item {
+        margin-right: 1.5rem; // Adjust spacing if needed
+    }
+}
+
+// Light/Dark Mode Toggle Switch
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #faebd7; // Light mode background
+        border-radius: 34px;
+        transition: 0.4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .slider {
+        background-color: #333333; // Dark mode background
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+
+    .icon {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        height: 26px;
+        width: 26px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sun {
+        background-color: #FFD966;
+        background-image: url('/assets/icons/sun-solid.svg');
+        background-size: cover;
+    }
+
+    .moon {
+        background-color: #5D8AA8;
+        background-image: url('/assets/icons/moon-solid.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 26px; // Adjusted to match slider size
+        width: 26px;  // Adjusted to match slider size
+    }
+
+    input:checked + .slider .icon {
+        transform: translateX(26px) rotate(360deg);
+        background-color: #5D8AA8;
+    }
+
+    input:checked + .slider .icon.sun {
+        transform: translateX(26px) rotate(360deg);
+        background-image: url('/assets/icons/moon-solid.svg');
+        background-color: #5D8AA8;
+    }
+}
