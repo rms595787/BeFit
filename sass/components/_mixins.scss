@@ -1,25 +1,26 @@
-// _mixins.scss
-@import 'varibales';
+@import 'variables';
+
 // Mixin for navbar styles
 @mixin navbar-styles($background, $text-color, $button-bg, $search-border) {
-  background-color: $background;
-  color: $text-color;
-  .nav-item {
-      color: $text-color;
-  }
-  .search-bar {
-      background-color: $background;
-      color: $text-color;
-      border: 1px solid $search-border;
-  }
-  .mode-toggle {
-    align-items: center;
-      color: $text-color;
-      &:hover {
-          opacity: 0.8;
-      }
-  }
+    background-color: $background;
+    color: $text-color;
+    .nav-item {
+        color: $text-color;
+    }
+    .search-bar {
+        background-color: $background;
+        color: $text-color;
+        border: 1px solid $search-border;
+    }
+    .mode-toggle {
+        align-items: center;
+        color: $text-color;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
+
 // Mixin for dark mode
 @mixin dark-mode {
     body {
@@ -29,19 +30,13 @@
     .navbar {
         @include navbar-styles($navbar-dark, $text-body-dark, $button-dark, $search-border-dark);
     }
-    .nav-item {
-        color: $search-border-dark;  // Make sure nav items use dark mode color
-    }
-    .mode-toggle {
-        color: $search-border-dark; // Update mode toggle color in dark mode
-    }
     .switch .slider {
         background-color: $search-border-dark;
     }
-  }
-  
-  // Mixin for light mode
-  @mixin light-mode {
+}
+
+// Mixin for light mode
+@mixin light-mode {
     body {
         background-color: $background-light;
         color: $text-body-light;
@@ -49,14 +44,7 @@
     .navbar {
         @include navbar-styles($navbar-light, $text-body-light, $button-light, $search-border-light);
     }
-    .nav-item {
-        color: $search-border-light;  // Make sure nav items use light mode color
-    }
-    .mode-toggle {
-        color: $search-border-light; // Update mode toggle color in light mode
-    }
     .switch .slider {
         background-color: $search-border-light;
     }
-  }
-  
+}

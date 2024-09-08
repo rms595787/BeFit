@@ -1,4 +1,4 @@
-@import 'varibales';
+@import 'variables';
 @import 'mixins';
 
 // General body styles
@@ -25,29 +25,19 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
 
-    // Styles for light mode
     &.light-mode {
-        background-color: $navbar-light; // Light mode background for navbar
-
-        .nav-item, #modeText {
-            color: $search-border-light; // Peru color
-        }
+        @include light-mode;
     }
 
-    // Styles for dark mode
     &.dark-mode {
-        background-color: $navbar-dark; // Dark mode background for navbar
-
-        .nav-item, #modeText {
-            color: $search-border-dark; // Dark mode text color
-        }
+        @include dark-mode;
     }
 }
 
 // Nav center items
 .nav-center {
     display: flex;
-    align-items: center; // Ensure vertical alignment of nav items
+    align-items: center;
 
     .nav-item {
         margin-right: 1.5rem;
@@ -64,16 +54,16 @@ body {
 
     .mode-toggle {
         display: flex;
-        align-items: center; // Ensure "Light/Dark" is aligned
+        align-items: center;
         padding-right: 1rem;
 
         #modeText {
-            margin-right: 0.5rem; // Add space between the text and the switch
+            margin-right: 0.5rem;
         }
     }
 
     .nav-item {
-        margin-right: 1.5rem; // Adjust spacing if needed
+        margin-right: 1.5rem;
     }
 }
 
@@ -149,18 +139,16 @@ body {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        height: 26px; // Adjusted to match slider size
-        width: 26px;  // Adjusted to match slider size
+        height: 26px;
+        width: 26px;
     }
 
     input:checked + .slider .icon {
-        transform: translateX(26px) rotate(360deg);
+        transform: translateX(26px);
         background-color: #5D8AA8;
     }
 
     input:checked + .slider .icon.sun {
-        transform: translateX(26px) rotate(360deg);
         background-image: url('/assets/icons/moon-solid.svg');
-        background-color: #5D8AA8;
     }
 }
