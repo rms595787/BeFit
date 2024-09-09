@@ -1,6 +1,18 @@
 // _variables.scss
 
+// Font Variables
+$logo-font:'Poppins-logo',sans-serif;
+$heading-font: 'Poppins', sans-serif;
+$button-font: 'Lato', sans-serif;
+$navbar-font: 'Inter', sans-serif;
+$para-font:'Lora-italic-para',sans-serif;
+$captions-font:'Lora-italic-captions',sans-serif;
+$data-font: 'Roboto Mono Numbers', monospace;
+$footer-font: 'Nunito-footer', sans-serif;
+
+
 // Light Mode Colors
+$navbar-text-light:#a65200;
 $background-light: #faebd7; //Antique White
 $text-body-light: #242124;  //Raisin Black
 $navbar-light: #deb887;     //Burly Wood    
@@ -13,3 +25,9 @@ $text-body-dark: #faebd7;   //Antique White
 $navbar-dark: #696969;      //Dim Gray
 $button-dark: #e97451;      //Burnt Sienna
 $search-border-dark: #cd853f;   //Peru
+
+
+// Main part of Body(image slider variables)
+$primary-color: #ff5722;
+$text-color: white;
+$dot-size: 12px;

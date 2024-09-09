@@ -1,0 +1,41 @@
+// _font.scss
+
+// Import font files from local path
+@font-face {
+    font-family: 'Poppins-logo';
+    src: url('/assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter/Inter_28pt-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lora-italic-para';
+    src: url('/assets/fonts/Lora/Lora-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lora-italic-captions';
+    src: url('/assets/fonts/Lora/Lora-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono Numbers';
+    src: url('/assets/fonts/Roboto_Mono/RobotoMono-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito-footer';
+    src: url('/fonts/Nunito-Regular.ttf') format('truetype');
+}

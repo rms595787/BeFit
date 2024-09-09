@@ -54,6 +54,24 @@
         padding:5px;
         background-color: $background-dark;
     }
+    
+        // changing font color which is over the images in slider
+        .main-light-mode{
+            .quote-overlay{
+                color:$text-body-dark;
+            }
+        }
+}
+// try for free button
+.cta-button {
+    margin-top: 10px;
+    padding: 12px 24px;
+    background-color: $button-light;
+    color: $text-body-light;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 // Mixin for light mode
@@ -63,7 +81,7 @@
         color: $text-body-light;
     }
     .navbar {
-        @include navbar-styles($navbar-light, $text-body-light, $button-light, $search-border-light);
+        @include navbar-styles($navbar-light, $navbar-text-light, $button-light, $search-border-light);
     }
     .switch .slider {
         background-color: $search-border-light;
@@ -80,5 +98,24 @@
         border-radius: 80px;
         padding:5px;
         background-color: $background-light;
+    }
+    
+    // changing font color which is over the images in slider
+    .main-light-mode{
+        .quote-overlay{
+            color:$navbar-text-light;
+        }
+    }
+
+    // try for free button
+    .cta-button {
+        margin-top: 10px;
+        padding: 12px 24px;
+        background-color: $button-light;
+        color: $text-body-light;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
     }
 }
